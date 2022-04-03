@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import StartQuizPage from './components/StartQuizPage'
+import Quiz from './components/Quiz'
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function App() {
+    const [onStartPage, setOnStartPage] = useState(true);
+    const [formData, setFormData] = useState(null);
 
-export default App;
+    function startQuiz() {
+        setOnStartPage(false)
+    }
+
+    function submitQuizFormData(event, formData) {
+        event.preventDefault();
+        startQuiz();
+        setFormData(formData);
+    }
+
+    function goToStartPage() {
+        setOnStartPage(true);
+    }
+
+    return (
+        <>
+            {
+            onStartPage ? 
+                <StartQuizPage 
+                    startQuiz = {submitQuizFormData}
+                /> :
+                <Quiz 
+                    formData={formData}
+                    goToStartPage={goToStartPage}
+                />
+            }
+        </>
+    );
+};

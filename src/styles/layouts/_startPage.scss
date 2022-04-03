@@ -1,0 +1,94 @@
+body, html {
+    font-family: 'Inter', sans-serif;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #F5F7FB;
+    background-image: url('../../images/yellow.svg'), url('../../images/blue.svg');
+    background-repeat: no-repeat;
+    background-position: top right, bottom -1.5rem left -1.5rem;
+    gap: 2rem;
+    h1 {
+        font-family: 'Karla', sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #293264;
+    }
+    .description {
+        color: #293264;
+        padding: 0 1.5rem;
+        line-height: 1.4em;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        .input {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .input-title {
+                font-family: 'Karla', sans-serif;
+                color: #293264;
+            }
+            .form-input-option-container {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                .option {
+                    // background-color: #D6DBF5;
+                    border-radius: 0.75rem;
+                    box-shadow: inset 0px 0px 0px 0.05rem #293264;
+                    &:hover {
+                        background-color: #D6DBF5;
+                        box-shadow: none;
+                    }
+                }
+                label {
+                    display: inline-block;
+                    color: #293264;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 3.5rem;
+                    font-size: 0.75rem;
+                    padding: 0.4rem 0.85rem;
+                }
+                .amount label {
+                    min-width: 3rem;
+                }
+                input {
+                    display: none;
+                }
+                .option.checked {
+                    box-shadow: none;
+                    background-color: #D6DBF5;
+                }
+            }
+        }
+        button {
+            width: 11.25rem;
+            height: 2.5rem;
+            margin-top: 0.75rem;
+            border: none;
+            color: #F5F7FB;
+            background-color: #4D5B9E;
+            border-radius: 1.25rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 250ms;
+            &:hover {
+                background-color: #4D5B9EBF;
+                color: white;
+            }
+        }
+    }
+}

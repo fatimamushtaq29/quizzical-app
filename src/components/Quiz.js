@@ -39,7 +39,6 @@ export default function Quiz(props) {
         };
         loadAPI();
     }, [props.formData]);
-    console.log(quizData)
 
     if (!quizData) return null;
 

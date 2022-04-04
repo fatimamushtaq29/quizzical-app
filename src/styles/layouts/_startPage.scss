@@ -43,12 +43,10 @@ body, html {
                 justify-content: center;
                 gap: 1rem;
                 .option {
-                    // background-color: #D6DBF5;
+                    background-color: #D6DBF5;
                     border-radius: 0.75rem;
-                    box-shadow: inset 0px 0px 0px 0.05rem #293264;
                     &:hover {
-                        background-color: #D6DBF5;
-                        box-shadow: none;
+                        box-shadow: inset 0px 0px 0px 0.05rem #293264;
                     }
                 }
                 label {
@@ -68,7 +66,7 @@ body, html {
                     display: none;
                 }
                 .option.checked {
-                    box-shadow: none;
+                    box-shadow: inset 0px 0px 0px 0.05rem #293264;
                     background-color: #D6DBF5;
                 }
             }

@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 General Knowledge testing app with third-party API integration
 
+Live Site : [https://fatimamushtaq29.github.io/quizzical-app/](https://fatimamushtaq29.github.io/quizzical-app/).
+
 ### Built with
 
 - React.js
